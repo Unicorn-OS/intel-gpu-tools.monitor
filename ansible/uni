@@ -1,0 +1,4 @@
+---
+- hosts: local
+  roles:
+  - intel_gpu_top

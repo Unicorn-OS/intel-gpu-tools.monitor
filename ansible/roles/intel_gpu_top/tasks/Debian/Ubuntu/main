@@ -1,7 +1,6 @@
 ---
-- name: Install 
+- name: install intel-gpu-tools
+  become: true
   ansible.builtin.apt:
     pkg:
-    - foo
-    - foo-tools
-  become: true
+    - intel-gpu-tools

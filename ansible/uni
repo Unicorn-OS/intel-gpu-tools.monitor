@@ -1,5 +1,6 @@
 ---
 - hosts: local
+    sudoers: true
   roles:
   - intel_gpu_top
   - test

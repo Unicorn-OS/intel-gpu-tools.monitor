@@ -2,7 +2,6 @@
 - shell: which intel_gpu_top
   register: location
 
-
 - name: Allow intel-gpu-top to run without password
   become: yes
   community.general.sudoers:

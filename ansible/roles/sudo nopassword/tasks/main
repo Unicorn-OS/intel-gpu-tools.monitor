@@ -8,6 +8,6 @@
   community.general.sudoers:
     name: allow-intel-gpu-top
     state: present
-    user: "{{ansible user}}"
+    user: "{{ansible_user}}"
     commands: "{{location.stdout}}"
     nopassword: true

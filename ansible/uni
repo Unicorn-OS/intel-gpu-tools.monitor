@@ -3,5 +3,6 @@
   vars:
     sudoers: true
   roles:
+  - .pre
   - intel_gpu_top
   - test

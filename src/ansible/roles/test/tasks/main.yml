@@ -1,13 +1,13 @@
 ---
 - name: Create bin directory
   ansible.builtin.file:
-    path: "/home/{{ansible_user}}/bin"
+    path: "/home/{{ansible_user}}/.local/bin"
     state: directory
 
 - name: Copy gputop example
   ansible.builtin.copy:
     src: gputop
-    dest: "/home/{{ansible_user}}/bin/"
+    dest: "/home/{{ansible_user}}/.local/bin/"
     owner: "{{ansible_user}}"
     group: "{{ansible_user}}"
     mode: u=rwx,g=r,o=r

@@ -4,6 +4,5 @@
     sudoers: true
   roles:
   - .pre
-  - intel_gpu_top/install
-  - intel_gpu_top/sudo nopassword
+  - intel_gpu_top
   - .test

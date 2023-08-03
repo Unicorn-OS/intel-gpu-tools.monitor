@@ -1,16 +1,4 @@
----
-- name: Create bin directory
-  ansible.builtin.file:
-    path: "/home/{{ansible_user}}/.local/bin"
-    state: directory
-
-- name: Copy gputop example
-  ansible.builtin.copy:
-    src: gputop
-    dest: "/home/{{ansible_user}}/.local/bin/"
-    owner: "{{ansible_user}}"
-    group: "{{ansible_user}}"
-    mode: u=rwx,g=r,o=r
-
-- debug:
-    msg: "Restart your shell to load bin/gputop into path!"
+- name: Add to bash_history
+  ansible.builtin.lineinfile:
+    path: "{{ ansible_env.HOME }}/.bash_history"
+    line: sudo intel_gpu_top

@@ -1,8 +1,9 @@
----
-- hosts: local
+- hosts: localhost
   vars:
+    ansible_become_password: u
     sudoers: true
   roles:
   - .pre
   - intel_gpu_top
-  - .test
+  - intel_gpu_top/.test
+

@@ -2,7 +2,9 @@
   ansible.builtin.shell: rpm-ostree install igt-gpu-tools
   args:
     creates: /usr/bin/intel_gpu_top
-  notify: Reboot
+  notify:
+  - Reboot
+  - End play if localhost
   become: true
 
 - name: Force reboot

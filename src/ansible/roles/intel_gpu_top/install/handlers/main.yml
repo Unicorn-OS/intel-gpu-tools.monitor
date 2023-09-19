@@ -1,4 +1,9 @@
+# https://www.middlewareinventory.com/blog/ansible-inventory_hostname-ansible_hostname-variables/
 - name: Reboot
   ansible.builtin.reboot:
-  when: not ansible_host == 'localhost'
+  when: not inventory_hostname == 'localhost'
   become: true
+
+- name: End play if localhost
+  ansible.builtin.meta: end_play
+  when: inventory_hostname == 'localhost'

@@ -1,5 +1,9 @@
 - name: Install with rpm-ostree
   ansible.builtin.shell: rpm-ostree install igt-gpu-tools
   args:
-    creates: /usr/local/bin/adb
+    creates: /usr/bin/intel_gpu_top
+  notify: Reboot
   become: true
+
+- name: Force reboot
+  ansible.builtin.meta: flush_handlers

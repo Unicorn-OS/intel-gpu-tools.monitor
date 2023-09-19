@@ -1,0 +1,4 @@
+- name: Reboot
+  ansible.builtin.reboot:
+  when: not ansible_host == 'localhost'
+  become: true

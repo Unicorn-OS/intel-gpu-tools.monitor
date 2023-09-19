@@ -5,6 +5,5 @@
   roles:
   - .pre
   - intel_gpu_top
-  # - intel_gpu_top/.test
-  # - intel_gpu_top/sudo nopassword
-
+  - intel_gpu_top/sudo nopassword
+  - intel_gpu_top/.test

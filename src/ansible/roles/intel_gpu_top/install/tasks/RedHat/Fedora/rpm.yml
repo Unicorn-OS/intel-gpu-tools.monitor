@@ -1,0 +1,6 @@
+- name: Install igt-gpu-tools
+  ansible.builtin.dnf:
+    name:
+      - igt-gpu-tools
+    state: latest
+  become: true

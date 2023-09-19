@@ -1,0 +1,5 @@
+- name: Install with rpm-ostree
+  ansible.builtin.shell: rpm-ostree install igt-gpu-tools
+  args:
+    creates: /usr/local/bin/adb
+  become: true
